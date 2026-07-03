@@ -34,11 +34,12 @@ function escapeRegExp(value) {
 
 test("repo exposes the skill in the standard npx skills discovery layout", () => {
   const discoveredSkills = listSkills();
-  assert.equal(discoveredSkills.length, 28);
+  assert.equal(discoveredSkills.length, 16);
   assert.ok(discoveredSkills.includes("omniverse-engineering-skillset"));
   assert.ok(discoveredSkills.includes("omniverse-plan"));
   assert.ok(discoveredSkills.includes("omniverse-code-review"));
-  assert.ok(discoveredSkills.includes("omniverse-commit-push-pr"));
+  assert.ok(discoveredSkills.includes("omniverse-commit"));
+  assert.equal(discoveredSkills.includes("omniverse-commit-push-pr"), false);
   assert.deepEqual(discoveredSkills, [...discoveredSkills].sort());
 
   for (const skillName of discoveredSkills) {

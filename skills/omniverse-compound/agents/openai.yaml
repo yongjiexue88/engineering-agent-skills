@@ -1,4 +1,4 @@
 interface:
   display_name: "Omniverse Compound"
-  short_description: "Help with Omniverse Compound tasks"
+  short_description: "Load or capture reusable project learnings."
   default_prompt: "Use $omniverse-compound to help with this engineering workflow."

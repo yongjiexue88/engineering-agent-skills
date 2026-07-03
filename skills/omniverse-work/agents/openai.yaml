@@ -1,4 +1,4 @@
 interface:
   display_name: "Omniverse Work"
-  short_description: "Help with Omniverse Work tasks"
+  short_description: "Implement, set up, refactor, and verify engineering work."
   default_prompt: "Use $omniverse-work to help with this engineering workflow."

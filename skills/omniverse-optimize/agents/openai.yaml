@@ -1,4 +1,4 @@
 interface:
   display_name: "Omniverse Optimize"
-  short_description: "Help with Omniverse Optimize tasks"
+  short_description: "Improve performance, reliability, or code simplicity."
   default_prompt: "Use $omniverse-optimize to help with this engineering workflow."

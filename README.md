@@ -22,8 +22,8 @@ This package installs a ready-to-use skillset that helps your agent reason like 
 
 ## What You Get
 
-- 28 bundled skills: one deep engineering judgment skill plus 27 lifecycle workflow skills.
-- Workflow coverage for brainstorm, ideate, strategy, plan, work, debug, optimize, simplify, code review, doc review, polish, dogfood, browser QA, Xcode checks, proof, product pulse, promotion, commit, push/PR, PR feedback, worktrees, setup, feedback analysis, and durable learning.
+- 16 bundled skills: one deep engineering judgment skill plus 15 broader lifecycle workflow skills.
+- Workflow coverage for direction setting, planning, implementation, setup, debugging, optimization, simplification, review, PR feedback, dogfooding, browser QA, Xcode checks, proof, product updates, release communication, git handoff, feedback analysis, and durable learning.
 - Skill-local helper scripts for plan files, solution notes, git summaries, browser QA reports, and proof packets.
 - Staff-level system design playbooks for common production systems, including feeds, search, queues, caching, rate limiting, real-time messaging, workflows, monitoring, large-file handling, payments, LLM serving, and high-contention inventory.
 - Multi-platform plugin manifests for Codex-style plugins plus Claude, Cursor, Kimi, OpenCode, Pi, and Agent Gateway layouts.
@@ -106,7 +106,7 @@ Use omniverse-work to implement the approved plan.
 Use omniverse-debug to investigate this failing test.
 Use omniverse-code-review to review this PR for production risks.
 Use omniverse-test-browser to smoke test this dev server.
-Use omniverse-commit-push-pr to commit, push, and draft the PR.
+Use omniverse-commit to commit, push, and draft the PR.
 Use omniverse-compound to capture the solution after this fix.
 Use omniverse-engineering-skillset before implementing this feature.
 Use omniverse-engineering-skillset to review these API docs before release.
@@ -126,7 +126,7 @@ Use omniverse-engineering-skillset to review state ownership and concurrency ris
 | Code review | `Use omniverse-engineering-skillset to review this PR for production risks.` |
 | Focused code review | `Use omniverse-code-review to review this diff for correctness and missing tests.` |
 | Browser QA | `Use omniverse-test-browser to verify this workflow on desktop and mobile.` |
-| Git handoff | `Use omniverse-commit-push-pr to commit, push, and prepare the PR body.` |
+| Git handoff | `Use omniverse-commit to commit, push, and prepare the PR body.` |
 | Knowledge capture | `Use omniverse-compound to write a reusable solution note for this issue.` |
 | System design | `Use omniverse-engineering-skillset to design a rate limiter for this API.` |
 | API documentation | `Use omniverse-engineering-skillset to review these endpoint docs before release.` |
@@ -137,13 +137,13 @@ Use omniverse-engineering-skillset to review state ownership and concurrency ris
 | Category | Skills |
 | --- | --- |
 | Core judgment | `omniverse-engineering-skillset` |
-| Discovery and direction | `omniverse-brainstorm`, `omniverse-ideate`, `omniverse-strategy`, `omniverse-pov`, `omniverse-lfg` |
-| Planning and execution | `omniverse-plan`, `omniverse-work`, `omniverse-setup`, `omniverse-worktree` |
-| Debugging and improvement | `omniverse-debug`, `omniverse-optimize`, `omniverse-simplify-code` |
-| Reviews | `omniverse-code-review`, `omniverse-doc-review`, `omniverse-resolve-pr-feedback` |
-| QA and readiness | `omniverse-dogfood`, `omniverse-test-browser`, `omniverse-test-xcode`, `omniverse-polish`, `omniverse-proof` |
-| Shipping and communication | `omniverse-commit`, `omniverse-commit-push-pr`, `omniverse-product-pulse`, `omniverse-promote` |
-| Durable learning | `omniverse-compound`, `omniverse-compound-refresh`, `omniverse-feedback-analysis` |
+| Discovery and direction | `omniverse-brainstorm` |
+| Planning and execution | `omniverse-plan`, `omniverse-work` |
+| Debugging and improvement | `omniverse-debug`, `omniverse-optimize` |
+| Reviews | `omniverse-code-review`, `omniverse-doc-review` |
+| QA and readiness | `omniverse-dogfood`, `omniverse-test-browser`, `omniverse-test-xcode`, `omniverse-proof` |
+| Shipping and communication | `omniverse-commit`, `omniverse-product-pulse` |
+| Feedback and learning | `omniverse-feedback-analysis`, `omniverse-compound` |
 
 ## Durable Artifacts
 

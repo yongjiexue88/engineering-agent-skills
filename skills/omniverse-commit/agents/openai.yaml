@@ -1,4 +1,4 @@
 interface:
   display_name: "Omniverse Commit"
-  short_description: "Help with Omniverse Commit tasks"
+  short_description: "Prepare commits, pushes, and PR handoffs."
   default_prompt: "Use $omniverse-commit to help with this engineering workflow."

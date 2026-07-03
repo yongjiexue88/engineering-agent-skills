@@ -1,4 +1,4 @@
 interface:
   display_name: "Omniverse Code Review"
-  short_description: "Help with Omniverse Code Review tasks"
+  short_description: "Review diffs and resolve PR feedback with evidence."
   default_prompt: "Use $omniverse-code-review to help with this engineering workflow."

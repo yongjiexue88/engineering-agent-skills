@@ -1,4 +1,4 @@
 interface:
   display_name: "Omniverse Test Browser"
-  short_description: "Help with Omniverse Test Browser tasks"
+  short_description: "Verify browser workflows and product polish."
   default_prompt: "Use $omniverse-test-browser to help with this engineering workflow."

@@ -1,4 +1,4 @@
 interface:
   display_name: "Omniverse Brainstorm"
-  short_description: "Help with Omniverse Brainstorm tasks"
+  short_description: "Compare options, strategy, and technical recommendations."
   default_prompt: "Use $omniverse-brainstorm to help with this engineering workflow."
