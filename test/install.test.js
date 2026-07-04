@@ -34,6 +34,9 @@ function escapeRegExp(value) {
 
 test("repo exposes the skill in the standard npx skills discovery layout", () => {
   const discoveredSkills = listSkills();
+  const skillDocs = fs.readFileSync(path.resolve(__dirname, "../docs/skills/README.md"), "utf8");
+  const rootReadme = fs.readFileSync(path.resolve(__dirname, "../README.md"), "utf8");
+
   assert.equal(discoveredSkills.length, 16);
   assert.ok(discoveredSkills.includes("architecture-audit"));
   assert.ok(discoveredSkills.includes("omniverse-plan"));
@@ -51,16 +54,31 @@ test("repo exposes the skill in the standard npx skills discovery layout", () =>
     assert.ok(frontmatter, `${skillName} is missing YAML frontmatter`);
     assert.match(frontmatter[1], new RegExp(`^name:\\s*${escapeRegExp(skillName)}\\s*$`, "m"));
     assert.match(frontmatter[1], /^description:\s*\S.+$/m);
+    assert.match(
+      frontmatter[1],
+      /\bUse (when|for)\b/,
+      `${skillName} description should include explicit trigger wording`
+    );
     assert.doesNotMatch(source, /\[TODO:/);
+    assert.match(skillDocs, new RegExp(`\\b${escapeRegExp(skillName)}\\b`), `${skillName} should be documented`);
+    assert.match(rootReadme, new RegExp(`\\b${escapeRegExp(skillName)}\\b`), `${skillName} should be in README`);
 
     const openAiYaml = path.join(skillDir, "agents", "openai.yaml");
     assert.ok(fs.existsSync(openAiYaml), `${skillName} is missing agents/openai.yaml`);
-    assert.match(
-      fs.readFileSync(openAiYaml, "utf8"),
-      new RegExp(`\\$${escapeRegExp(skillName)}\\b`),
-      `${skillName} default prompt should mention the skill`
-    );
+    const agentMetadata = fs.readFileSync(openAiYaml, "utf8");
+    assert.match(agentMetadata, /^\s*display_name:\s*".+"/m);
+    assert.match(agentMetadata, /^\s*short_description:\s*".+"/m);
+    assert.match(agentMetadata, /^\s*default_prompt:\s*".+"/m);
+    assert.match(agentMetadata, new RegExp(`\\$${escapeRegExp(skillName)}\\b`), `${skillName} default prompt should mention the skill`);
   }
+});
+
+test("README includes both supported install paths", () => {
+  const rootReadme = fs.readFileSync(path.resolve(__dirname, "../README.md"), "utf8");
+
+  assert.match(rootReadme, /npx skills add yongjiexue88\/omniverse-engineering-skillset/);
+  assert.match(rootReadme, /npx --yes omniverse-engineering-skillset@latest install/);
+  assert.match(rootReadme, /Automatic Trigger Map/);
 });
 
 test("CLI default install creates .agents/skills under the current directory", () => {
