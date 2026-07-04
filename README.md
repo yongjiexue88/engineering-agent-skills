@@ -95,7 +95,7 @@ The npm install path uses the same default target: `.agents/skills` with an `s`.
 Ask your agent to use the skill by name:
 
 ```txt
-Use omniverse-engineering-skillset to review this architecture proposal.
+Use omniverse-architecture-review to review this architecture proposal.
 ```
 
 Try it for everyday engineering work:
@@ -108,11 +108,11 @@ Use omniverse-code-review to review this PR for production risks.
 Use omniverse-test-browser to smoke test this dev server.
 Use omniverse-commit to commit, push, and draft the PR.
 Use omniverse-compound to capture the solution after this fix.
-Use omniverse-engineering-skillset before implementing this feature.
-Use omniverse-engineering-skillset to review these API docs before release.
-Use omniverse-engineering-skillset to write a commit message for this diff.
-Use omniverse-engineering-skillset to design a hybrid follower timeline.
-Use omniverse-engineering-skillset to review state ownership and concurrency risks.
+Use omniverse-architecture-review before implementing this feature.
+Use omniverse-architecture-review to review these API docs before release.
+Use omniverse-architecture-review to write a commit message for this diff.
+Use omniverse-architecture-review to design a hybrid follower timeline.
+Use omniverse-architecture-review to review state ownership and concurrency risks.
 ```
 
 ## Popular Workflows
@@ -123,20 +123,20 @@ Use omniverse-engineering-skillset to review state ownership and concurrency ris
 | Planning | `Use omniverse-plan to write a plan under docs/plans for this migration.` |
 | Execution | `Use omniverse-work to implement the smallest safe version of this change.` |
 | Debugging | `Use omniverse-debug to reproduce and fix this CI failure.` |
-| Code review | `Use omniverse-engineering-skillset to review this PR for production risks.` |
+| Code review | `Use omniverse-architecture-review to review this PR for production risks.` |
 | Focused code review | `Use omniverse-code-review to review this diff for correctness and missing tests.` |
 | Browser QA | `Use omniverse-test-browser to verify this workflow on desktop and mobile.` |
 | Git handoff | `Use omniverse-commit to commit, push, and prepare the PR body.` |
 | Knowledge capture | `Use omniverse-compound to write a reusable solution note for this issue.` |
-| System design | `Use omniverse-engineering-skillset to design a rate limiter for this API.` |
-| API documentation | `Use omniverse-engineering-skillset to review these endpoint docs before release.` |
-| Commit messages | `Use omniverse-engineering-skillset to write a commit message for this diff.` |
+| System design | `Use omniverse-architecture-review to design a rate limiter for this API.` |
+| API documentation | `Use omniverse-architecture-review to review these endpoint docs before release.` |
+| Commit messages | `Use omniverse-architecture-review to write a commit message for this diff.` |
 
 ## Skill Inventory
 
 | Category | Skills |
 | --- | --- |
-| Core judgment | `omniverse-engineering-skillset` |
+| Core judgment | `omniverse-architecture-review` |
 | Discovery and direction | `omniverse-brainstorm` |
 | Planning and execution | `omniverse-plan`, `omniverse-work` |
 | Debugging and improvement | `omniverse-debug`, `omniverse-optimize` |

@@ -28,7 +28,7 @@ test("Codex plugin manifest mirrors package metadata and references existing ass
   assert.ok(manifest.interface.capabilities.includes("Read"));
   assert.ok(manifest.interface.capabilities.includes("Write"));
 
-  assertPathExists("skills/omniverse-engineering-skillset/SKILL.md");
+  assertPathExists("skills/omniverse-architecture-review/SKILL.md");
   assertPathExists("skills/omniverse-plan/SKILL.md");
   assertPathExists("skills/omniverse-compound/scripts/create-solution-note.js");
   assertPathExists(manifest.interface.composerIcon.replace("./", ""));

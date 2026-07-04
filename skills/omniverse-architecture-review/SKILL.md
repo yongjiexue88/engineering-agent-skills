@@ -1,9 +1,9 @@
 ---
-name: omniverse-engineering-skillset
-description: Use for engineering review, system design, backend architecture, ADR/RFC critique, API docs, commit messages, code quality, low-level design, implementation risk, production readiness, caching, rate limiting, search, queues, feeds, payments, observability, and distributed-systems tradeoffs; skip routine code edits and UI-only work.
+name: omniverse-architecture-review
+description: Use for architecture review, system design, backend architecture, ADR/RFC critique, API docs, commit messages, code quality, low-level design, implementation risk, production readiness, caching, rate limiting, search, queues, feeds, payments, observability, and distributed-systems tradeoffs; skip routine code edits and UI-only work.
 ---
 
-# Omniverse Engineering Skillset
+# Omniverse Architecture Review
 
 ## Purpose
 

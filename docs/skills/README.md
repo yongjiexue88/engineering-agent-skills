@@ -8,7 +8,7 @@ The authoritative runtime instructions live in each `skills/*/SKILL.md` file.
 
 | Skill | Purpose |
 | --- | --- |
-| [`omniverse-engineering-skillset`](./omniverse-engineering-skillset.md) | Deep senior-engineering judgment for code, architecture, implementation plans, API docs, commit messages, and system design. |
+| [`omniverse-architecture-review`](./omniverse-architecture-review.md) | Deep senior-engineering judgment for architecture, system design, API docs, commit messages, code quality, and implementation risk. |
 | `omniverse-brainstorm` | Compare options, concepts, strategies, and technical recommendations before implementation. |
 | `omniverse-plan` | Create implementation plans and optional `docs/plans/` artifacts. |
 | `omniverse-work` | Execute code/docs changes, repo setup, and worktree-scoped tasks through verification. |

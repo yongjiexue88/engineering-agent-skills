@@ -1,4 +1,4 @@
-# Omniverse Engineering Skillset
+# Omniverse Architecture Review
 
 Use this skill when you want a coding agent to review non-trivial engineering work before it ships.
 
@@ -15,7 +15,7 @@ Use this skill when you want a coding agent to review non-trivial engineering wo
 ## Invocation
 
 ```txt
-Use omniverse-engineering-skillset to review this architecture proposal.
+Use omniverse-architecture-review to review this architecture proposal.
 ```
 
-The runtime behavior is defined in `skills/omniverse-engineering-skillset/SKILL.md`.
+The runtime behavior is defined in `skills/omniverse-architecture-review/SKILL.md`.
