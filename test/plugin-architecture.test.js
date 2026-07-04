@@ -30,7 +30,7 @@ test("Codex plugin manifest mirrors package metadata and references existing ass
 
   assertPathExists("skills/architecture-audit/SKILL.md");
   assertPathExists("skills/omniverse-plan/SKILL.md");
-  assertPathExists("skills/omniverse-compound/scripts/create-solution-note.js");
+  assertPathExists("skills/omniverse-project-memory/scripts/create-solution-note.js");
   assertPathExists(manifest.interface.composerIcon.replace("./", ""));
   assertPathExists(manifest.interface.logo.replace("./", ""));
 });

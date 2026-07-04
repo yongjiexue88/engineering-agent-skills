@@ -29,8 +29,8 @@ test("plan script creates a durable plan template", () => {
   assert.match(content, /^## Validation/m);
 });
 
-test("compound script creates a solution-note template", () => {
-  const { output } = runScript("skills/omniverse-compound/scripts/create-solution-note.js", [
+test("project memory script creates a solution-note template", () => {
+  const { output } = runScript("skills/omniverse-project-memory/scripts/create-solution-note.js", [
     "Token Refresh Failure"
   ]);
 

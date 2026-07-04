@@ -1,0 +1,4 @@
+interface:
+  display_name: "Omniverse Project Memory"
+  short_description: "Load or capture reusable project knowledge."
+  default_prompt: "Use $omniverse-project-memory to load or capture reusable project knowledge."

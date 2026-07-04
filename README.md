@@ -107,7 +107,7 @@ Use omniverse-debug to investigate this failing test.
 Use omniverse-code-review to review this PR for production risks.
 Use omniverse-test-browser to smoke test this dev server.
 Use omniverse-commit to commit, push, and draft the PR.
-Use omniverse-compound to capture the solution after this fix.
+Use omniverse-project-memory to capture the solution after this fix.
 Use architecture-audit to review architecture risk before implementing this feature.
 Use omniverse-doc-review to review these API docs before release.
 Use omniverse-commit to write a commit message for this diff.
@@ -127,7 +127,7 @@ Use architecture-audit to review state ownership and concurrency risks.
 | Focused code review | `Use omniverse-code-review to review this diff for correctness and missing tests.` |
 | Browser QA | `Use omniverse-test-browser to verify this workflow on desktop and mobile.` |
 | Git handoff | `Use omniverse-commit to commit, push, and prepare the PR body.` |
-| Knowledge capture | `Use omniverse-compound to write a reusable solution note for this issue.` |
+| Knowledge capture | `Use omniverse-project-memory to write a reusable solution note for this issue.` |
 | System design | `Use architecture-audit to design a rate limiter for this API.` |
 | API documentation | `Use omniverse-doc-review to review these endpoint docs before release.` |
 | Commit messages | `Use omniverse-commit to write a commit message for this diff.` |
@@ -143,7 +143,7 @@ Use architecture-audit to review state ownership and concurrency risks.
 | Reviews | `omniverse-code-review`, `omniverse-doc-review` |
 | QA and readiness | `omniverse-dogfood`, `omniverse-test-browser`, `omniverse-test-xcode`, `omniverse-proof` |
 | Shipping and communication | `omniverse-commit`, `omniverse-product-pulse` |
-| Feedback and learning | `omniverse-feedback-analysis`, `omniverse-compound` |
+| Feedback and learning | `omniverse-feedback-analysis`, `omniverse-project-memory` |
 
 ## Durable Artifacts
 

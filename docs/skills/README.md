@@ -22,7 +22,7 @@ The authoritative runtime instructions live in each `skills/*/SKILL.md` file.
 | `omniverse-proof` | Create evidence packets for correctness and release claims. |
 | `omniverse-commit` | Prepare clean commits, pushes, and PR handoffs. |
 | `omniverse-product-pulse` | Summarize project status, release notes, launch copy, or demo scripts. |
-| `omniverse-compound` | Load prior repo memory or capture durable solution notes under `docs/solutions/`. |
+| `omniverse-project-memory` | Load prior project memory or capture durable solution notes under `docs/solutions/`. |
 | `omniverse-feedback-analysis` | Synthesize qualitative feedback into themes and actions. |
 
 ## Artifact Folders
@@ -30,7 +30,7 @@ The authoritative runtime instructions live in each `skills/*/SKILL.md` file.
 | Folder | Written by |
 | --- | --- |
 | `docs/plans/` | `omniverse-plan` |
-| `docs/solutions/` | `omniverse-compound` |
+| `docs/solutions/` | `omniverse-project-memory` |
 | `docs/reviews/` | Review-oriented skills when a durable review note is useful. |
 | `docs/qa/` | `omniverse-test-browser`, `omniverse-dogfood` |
 | `docs/proof/` | `omniverse-proof` |
