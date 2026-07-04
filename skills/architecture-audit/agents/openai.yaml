@@ -1,0 +1,7 @@
+interface:
+  display_name: "Architecture Audit"
+  short_description: "Audit architecture, system designs, and production risk"
+  default_prompt: "Use $architecture-audit to audit this architecture or system design before shipping."
+
+policy:
+  allow_implicit_invocation: true

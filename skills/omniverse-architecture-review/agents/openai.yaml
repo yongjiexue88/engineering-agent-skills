@@ -1,7 +1,0 @@
-interface:
-  display_name: "Omniverse Architecture Review"
-  short_description: "Review architecture, system designs, code, docs, and risks"
-  default_prompt: "Use $omniverse-architecture-review to review this engineering artifact before shipping."
-
-policy:
-  allow_implicit_invocation: true

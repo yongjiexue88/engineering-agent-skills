@@ -33,7 +33,7 @@ Options:
 
 Examples:
   npx omniverse-engineering-skillset install
-  npx omniverse-engineering-skillset install --skill omniverse-architecture-review
+  npx omniverse-engineering-skillset install --skill architecture-audit
   npx omniverse-engineering-skillset install --agent codex
   npx omniverse-engineering-skillset install --agent claude-code
   npx omniverse-engineering-skillset install --target .agents/skills

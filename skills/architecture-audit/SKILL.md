@@ -1,13 +1,13 @@
 ---
-name: omniverse-architecture-review
-description: Use for architecture review, system design, backend architecture, ADR/RFC critique, API docs, commit messages, code quality, low-level design, implementation risk, production readiness, caching, rate limiting, search, queues, feeds, payments, observability, and distributed-systems tradeoffs; skip routine code edits and UI-only work.
+name: architecture-audit
+description: Use for architecture audits, system design, backend architecture, ADR/RFC critique, implementation risk, production readiness, caching, rate limiting, search, queues, feeds, payments, observability, and distributed-systems tradeoffs; skip routine code edits, commit messages, and docs-only review.
 ---
 
-# Omniverse Architecture Review
+# Architecture Audit
 
 ## Purpose
 
-Review engineering artifacts before they ship and guide non-trivial architecture or implementation-risk decisions when requested. Use this skill to find correctness gaps, production risks, unclear decisions, weak documentation, weak low-level design, missing tests, and reviewer questions. Keep the review practical: identify what matters, explain why it matters, and propose concrete fixes.
+Audit engineering designs before they ship and guide non-trivial architecture or implementation-risk decisions when requested. Use this skill to find correctness gaps, production risks, unclear decisions, weak system boundaries, missing validation, and reviewer questions. Keep the review practical: identify what matters, explain why it matters, and propose concrete fixes.
 
 ## When to use
 
@@ -42,19 +42,17 @@ Use this skill when the user asks for engineering review, architecture/design gu
 - Designing collaborative editing, OT/CRDT convergence, shared document operation logs, presence/cursor state, or real-time co-editing.
 - Designing custom inverted-index search, posting-list storage, hot/cold search tiers, approximate ranking, or search without Elasticsearch/OpenSearch.
 - Designing inventory, booking, reservation, local availability, serviceability, scarce-resource, waiting-room, or admission-control systems that need fast reads and strong final consistency.
-- Reviewing a non-trivial code change, refactor plan, or implementation approach for correctness, simplicity, module boundaries, hidden assumptions, or testability.
-- Writing or improving a Git commit message.
-- Reviewing API documentation, integration docs, endpoint specs, or SDK docs.
-- Guiding low-level design for non-trivial implementation choices involving state ownership, dependency boundaries, concurrency/resource safety, or testable structure.
+- Auditing a non-trivial refactor plan or implementation approach for architecture-level correctness, module boundaries, hidden assumptions, or testability.
+- Auditing non-trivial implementation choices involving state ownership, dependency boundaries, concurrency/resource safety, or testable structure when they affect architecture risk.
 - Combining any of the above into one pre-ship review.
 
-Do not use this skill for routine implementation, small bug fixes, UI styling, formatting, dependency updates, or simple code edits unless the user explicitly asks for engineering review, architecture guidance, or production-risk analysis.
+Do not use this skill for routine implementation, small bug fixes, UI styling, formatting, dependency updates, simple code edits, Git commit messages, or docs-only review unless the user explicitly asks for architecture guidance or production-risk analysis.
 
 ## Inputs to inspect
 
 Inspect only the inputs relevant to the request:
 
-- User-provided text, design notes, API docs, diffs, or code snippets.
+- User-provided text, design notes, ADRs, RFCs, architecture docs, diffs, or code snippets.
 - Local repository files when the user asks to review the current project or branch.
 - Git diff, commit history, tests, docs, configuration, and release files when available and relevant.
 - Reference files in `references/` only when they match the selected workflow.
@@ -98,10 +96,10 @@ Choose the workflow from the request:
 - If the user asks about high-scale feeds, content aggregation, feed delivery, infinite scroll, ordered activity/news/product/event feeds, or read-heavy feed projections, use `references/system-design-feed-aggregation-playbook.md`; combine it with `references/system-design-pattern-recognition-playbook.md` for broader pattern selection.
 - If the user asks about URL shorteners, short codes, low-latency redirects, invite/share/referral links, compact public identifiers, or read-heavy immutable key-value mappings, use `references/system-design-read-heavy-immutable-mapping-playbook.md`; combine it with `references/system-design-pattern-recognition-playbook.md` for broader read-scaling context.
 - If the user provides an architecture decision, ADR, RFC decision, or tradeoff analysis, use `references/architecture-decision-checklist.md`; combine it with `references/system-design-architecture-decision-playbook.md` when the decision is about backend/system architecture technology choices.
-- If the user asks for a Git commit message, commit wording, or commit review, use `references/commit-message-guidelines.md`.
-- If the user provides API docs, endpoint specs, SDK docs, or integration docs, use `references/api-doc-review-checklist.md`.
-- If the user asks for implementation, refactoring, class/module design, state ownership, dependency boundaries, concurrency/resource handling, or testable code structure, use `references/low-level-design-coding-principles.md`; combine it with `references/coding-guidelines.md` for behavioral coding guardrails.
-- If the user specifically asks for coding guidelines, avoiding LLM coding mistakes, simplicity, surgical changes, explicit assumptions, or verifiable success criteria, use `references/coding-guidelines.md`.
+- If the user asks for a Git commit message, commit wording, commit review, push, or PR handoff, use `omniverse-commit` instead.
+- If the user provides API docs, endpoint specs, SDK docs, integration docs, README changes, release docs, runbooks, or migration instructions without architecture tradeoffs, use `omniverse-doc-review` instead.
+- If the user asks for routine implementation, refactoring, code edits, or coding guidelines without architecture-level risk, use `omniverse-work` or `omniverse-code-review` instead.
+- If the user asks about state ownership, module boundaries, dependency boundaries, concurrency/resource handling, or testable structure and those choices affect architecture risk, use `references/low-level-design-coding-principles.md`.
 - If the request is mixed, combine the relevant workflows and avoid duplicating findings.
 
 ## General review workflow
@@ -116,7 +114,7 @@ Choose the workflow from the request:
 
 ## Output formats
 
-For code, design, documentation, or release reviews, default to:
+For architecture, system design, ADR/RFC, or production-risk audits, default to:
 
 ```md
 ## Summary
@@ -140,9 +138,7 @@ For system design pattern recognition, use the response shape in `references/sys
 
 For specialized system designs, use the reference selected in `Workflow selection`; do not duplicate routing rules here.
 
-For Git commit messages, use the format and rules in `references/commit-message-guidelines.md`.
-
-For low-level design or coding guidance, use `references/low-level-design-coding-principles.md` when the task is non-trivial.
+For architecture-level implementation design, use `references/low-level-design-coding-principles.md` when state ownership, module boundaries, concurrency, resource safety, or testability are central to the risk.
 
 For small requests, keep the output shorter and include only the sections that add value.
 
@@ -150,7 +146,7 @@ For small requests, keep the output shorter and include only the sections that a
 
 - Be direct, specific, and evidence-based.
 - Prefer actionable findings over generic advice.
-- Label severity clearly when reviewing code or production-impacting changes.
+- Label severity clearly when reviewing architecture or production-impacting changes.
 - Do not invent facts that are not present in the artifact.
 - Preserve the user’s intent and improve clarity without overengineering.
 - Keep examples short and focused.

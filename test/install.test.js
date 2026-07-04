@@ -25,7 +25,7 @@ function envWithoutInitCwd(extra = {}) {
 }
 
 function skillPath(baseDir, target = ".agents/skills") {
-  return path.join(baseDir, target, "omniverse-architecture-review", "SKILL.md");
+  return path.join(baseDir, target, "architecture-audit", "SKILL.md");
 }
 
 function escapeRegExp(value) {
@@ -35,7 +35,7 @@ function escapeRegExp(value) {
 test("repo exposes the skill in the standard npx skills discovery layout", () => {
   const discoveredSkills = listSkills();
   assert.equal(discoveredSkills.length, 16);
-  assert.ok(discoveredSkills.includes("omniverse-architecture-review"));
+  assert.ok(discoveredSkills.includes("architecture-audit"));
   assert.ok(discoveredSkills.includes("omniverse-plan"));
   assert.ok(discoveredSkills.includes("omniverse-code-review"));
   assert.ok(discoveredSkills.includes("omniverse-commit"));
