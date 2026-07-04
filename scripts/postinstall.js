@@ -15,6 +15,10 @@ function shouldSkipAutoInstall(initCwd) {
     return "global npm install detected.";
   }
 
+  if (process.env.npm_command === "exec") {
+    return "npm exec/npx detected.";
+  }
+
   if (!initCwd) {
     return "INIT_CWD is unavailable.";
   }

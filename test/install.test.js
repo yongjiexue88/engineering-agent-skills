@@ -152,6 +152,7 @@ test("resolveTargetDir keeps absolute targets absolute", () => {
 test("postinstall skip rules only cover explicit skip, global install, and missing INIT_CWD", () => {
   const originalSkip = process.env.OMNIVERSE_ENGINEERING_SKILLSET_SKIP_AUTO_INSTALL;
   const originalGlobal = process.env.npm_config_global;
+  const originalNpmCommand = process.env.npm_command;
 
   try {
     delete process.env.OMNIVERSE_ENGINEERING_SKILLSET_SKIP_AUTO_INSTALL;
@@ -168,6 +169,10 @@ test("postinstall skip rules only cover explicit skip, global install, and missi
     delete process.env.OMNIVERSE_ENGINEERING_SKILLSET_SKIP_AUTO_INSTALL;
     process.env.npm_config_global = "true";
     assert.equal(shouldSkipAutoInstall(tempDir()), "global npm install detected.");
+
+    process.env.npm_config_global = "false";
+    process.env.npm_command = "exec";
+    assert.equal(shouldSkipAutoInstall(tempDir()), "npm exec/npx detected.");
   } finally {
     if (originalSkip === undefined) {
       delete process.env.OMNIVERSE_ENGINEERING_SKILLSET_SKIP_AUTO_INSTALL;
@@ -179,6 +184,12 @@ test("postinstall skip rules only cover explicit skip, global install, and missi
       delete process.env.npm_config_global;
     } else {
       process.env.npm_config_global = originalGlobal;
+    }
+
+    if (originalNpmCommand === undefined) {
+      delete process.env.npm_command;
+    } else {
+      process.env.npm_command = originalNpmCommand;
     }
   }
 });
