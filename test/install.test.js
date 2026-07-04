@@ -78,6 +78,8 @@ test("README includes both supported install paths", () => {
 
   assert.match(rootReadme, /npx skills add yongjiexue88\/omniverse-engineering-skillset/);
   assert.match(rootReadme, /npx --yes omniverse-engineering-skillset@latest install/);
+  assert.match(rootReadme, /npx --yes --package omniverse-engineering-skillset@latest omniverse-engineering-skillset list/);
+  assert.doesNotMatch(rootReadme, /npx --yes omniverse-engineering-skillset@latest list/);
   assert.match(rootReadme, /Automatic Trigger Map/);
 });
 

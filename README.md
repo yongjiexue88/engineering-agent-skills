@@ -95,14 +95,14 @@ npx skills add yongjiexue88/omniverse-engineering-skillset --global
 npx skills add yongjiexue88/omniverse-engineering-skillset --copy
 ```
 
-Use the npm package CLI when you want a versioned npm install path:
+Use the npm package CLI when you want a versioned npm install path. The short install command is fine for the common case; use the explicit binary form for commands like `list` where npm can otherwise parse the word as its own command.
 
 ```bash
-npx --yes omniverse-engineering-skillset@latest list
 npx --yes omniverse-engineering-skillset@latest install
-npx --yes omniverse-engineering-skillset@latest install --agent codex
-npx --yes omniverse-engineering-skillset@latest install --agent claude-code
-npx --yes omniverse-engineering-skillset@latest install --target ~/.codex/skills
+npx --yes --package omniverse-engineering-skillset@latest omniverse-engineering-skillset list
+npx --yes --package omniverse-engineering-skillset@latest omniverse-engineering-skillset install --agent codex
+npx --yes --package omniverse-engineering-skillset@latest omniverse-engineering-skillset install --agent claude-code
+npx --yes --package omniverse-engineering-skillset@latest omniverse-engineering-skillset install --target ~/.codex/skills
 ```
 
 For package-managed projects, you can pin it as a dependency:
@@ -145,8 +145,8 @@ Several skills can write lightweight project memory when a durable handoff is us
 
 | Problem | Fix |
 | --- | --- |
-| You only want one skill | `npx --yes omniverse-engineering-skillset@latest install --skill omniverse-plan` |
-| Your agent uses a custom skills directory | `npx --yes omniverse-engineering-skillset@latest install --target /path/to/skills` |
+| You only want one skill | `npx --yes --package omniverse-engineering-skillset@latest omniverse-engineering-skillset install --skill omniverse-plan` |
+| Your agent uses a custom skills directory | `npx --yes --package omniverse-engineering-skillset@latest omniverse-engineering-skillset install --target /path/to/skills` |
 | You installed the npm package but do not want postinstall copying | Set `OMNIVERSE_ENGINEERING_SKILLSET_SKIP_AUTO_INSTALL=1` before `npm install`. |
 | A skill did not trigger automatically | Ask by name once, for example `Use omniverse-code-review ...`; the installed `SKILL.md` descriptions provide the routing hints for future automatic selection. |
 

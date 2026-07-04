@@ -1,6 +1,6 @@
 {
   "name": "omniverse-engineering-skillset",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Install engineering workflow skills for coding agents across planning, implementation, review, QA, git handoff, project memory, and system design.",
   "author": {
     "name": "Yongjie Xue",
